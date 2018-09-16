@@ -7,12 +7,126 @@
     <title>Games | KDEMO GAMES</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Luckiest+Guy|Bitter:700|Open+Sans:400,600,600italic">
     <link rel="stylesheet" href="/gamedemo/css/style-min.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>
   </head>
+  <style>
+  #main-header #main-nav ul li a{
+    color:#302429;
+  }
+  .portfolioFilter {
+      text-align: center;
+  }
+  .portfolioFilter a { 
+      margin-right: 10px; 
+      color:#efe8e8;
+      text-decoration:none;
+      display: inline;
+      padding: 10px;
+      border: 1px solid;
+      border-radius: 4px;
+      background: #cacaca0f;
+  }
+   
+  .portfolioFilter a.current { 
+      font-weight:bold;
+  }
+
+  .g-thumb{
+      width: 300px;
+      height: auto;
+  }
+   
+  .isotope-item {
+      z-index: 2;
+  }
+  .isotope-hidden.isotope-item {
+      pointer-events: none;
+      z-index: 1;
+  }
+  .isotope,
+  .isotope .isotope-item {
+    /* change duration value to whatever you like */
+   
+      -webkit-transition-duration: 0.8s;
+      -moz-transition-duration: 0.8s;
+      transition-duration: 0.8s;
+  }
+  .isotope {
+      -webkit-transition-property: height, width;
+      -moz-transition-property: height, width;
+      transition-property: height, width;
+  }
+  .isotope .isotope-item {
+      -webkit-transition-property: -webkit-transform, opacity;
+      -moz-transition-property: -moz-transform, opacity;
+      transition-property: transform, opacity;
+  }
+  .thumbwrap{
+      border: 2px solid #d6614f;
+      margin: 5px;
+      overflow: hidden;
+  }
+  .portfolioContainer{
+      text-align: center;
+      margin: 50px 110px;
+  }
+
+  .img-caption{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 3em;
+    background: rgba(216, 210, 210, 0.28);
+    color: #fff;
+    cursor: pointer;
+    text-align: center; 
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: all 0.8s ease-out;
+  }
+
+  .img-caption h4{
+    text-shadow: 1px 1px 2px #000;
+  }
+  .img-caption button{
+    box-shadow: 1px 1px 2px #000;
+  }
+  .img-caption button:hover {
+    background: #302428;
+    color: #d6614f;
+    transition: all 0.6s ease-out;
+    text-decoration: underline;
+  }
+
+  .thumbwrap:hover .img-caption{
+    opacity: 0;
+  }
+
+  .bottom-top{
+    top: 100%;
+    left: 0;
+  }
+  .thumbwrap:hover .img-caption{
+  top: 0;
+  left: 0;
+  transition: all 0.6s ease-out;
+}
+
+.thumbwrap:hover .img-caption {
+  opacity: 1;
+}
+
+</style>
+
   <body>
 
-    <header id="main-header">
+    <header id="main-header" style="background:url(/gamedemo/images/backgrounds/single-bg-menu.png)!important;">
       <div class="row">
-        <div class="small-11 large-6 columns"><a href="index.html"><img src="/gamedemo/images/logo.png" alt="gamedevs" class="logo"></a></div>
+        <div class="small-11 large-6 columns"><a href="index.html"><img src="/gamedemo/images/single-logo.png" alt="gamedevs" class="logo" style="margin-top:1.4rem; "></a></div>
         <nav id="main-nav" class="small-16 large-10 columns">
           <ul class="main-menu">
             <li><a href="/gamedemo/index.html">Home</a></li>
@@ -25,112 +139,102 @@
       </div>
     </header>
 
-    <section class="inner-slider">
-      <div style="background: url('/gamedemo/images/placeholders/slider_1_small.jpg')"></div>
-      <div style="background: url('/gamedemo/images/placeholders/slider_2.jpg')"></div>
-    </section>
-
     <div class="content-top"></div>
-
-    <section id="main-content">
-
-      <div class="row">
-        <div class="small-16 columns">
-          <h1>Games</h1>
-          <div class="big-sep"></div>
-        </div>
-      </div>
-
-      <div class="row game-presentation">
-        <div class="small-16 large-9 columns">
-          <img src="/gamedemo/images/placeholders/game-large.jpg" alt="" class="thumbnail"/>
-          <div class="thumbnails">
-            <a href="/gamedemo/images/placeholders/game-large.jpg" target="_self" class="game-gallery thumbnail" data-litebox-group="group-1"><img src="/gamedemo/images/placeholders/game-t-1.jpg" alt="" /></a>
-            <a href="/gamedemo/images/placeholders/game-large.jpg" target="_self" class="game-gallery thumbnail" data-litebox-group="group-1"><img src="/gamedemo/images/placeholders/game-t-2.jpg" alt="" /></a>
-            <a href="/gamedemo/images/placeholders/game-large.jpg" target="_self" class="game-gallery thumbnail" data-litebox-group="group-1"><img src="/gamedemo/images/placeholders/game-t-3.jpg" alt="" /></a>
-            <a href="/gamedemo/images/placeholders/game-large.jpg" target="_self" class="game-gallery thumbnail" data-litebox-group="group-1"><img src="/gamedemo/images/placeholders/game-t-4.jpg" alt="" /></a>
-            <a href="/gamedemo/images/placeholders/game-large.jpg" target="_self" class="game-gallery thumbnail" data-litebox-group="group-1"><img src="/gamedemo/images/placeholders/game-t-5.jpg" alt="" /></a>
-          </div>
-        </div>
-        <div class="small-16 large-7 columns">
-          <div class="game-description">
-            <h2>Game Title</h2>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-              <br><br>
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
-            </p>
-          </div>
-          <div class="platforms">
-            <h5 class="white">Available on</h5>
-            <ul class="inline-list available-platforms">
-              <!--google-play-->
-              <li><a href="#"><img src="/gamedemo/images/icons/icon-gplay.png" alt="" /></a></li>
-              <!--apple-->
-              <li><a href="#"><img src="/gamedemo/images/icons/icon-apple.png" alt="" /></a></li>
-              <!--windows-->
-              <li><a href="#"><img src="/gamedemo/images/icons/icon-windows.png" alt="" /></a></li>
-              <!--steam-->
-              <li><a href="#" class="icon-steam"><img src="/gamedemo/images/icons/icon-steam.png" alt="" /></a></li>
-            </ul>
-          </div>
-          <div class="details-link">
-            <a href="games-single.html">Find Out More</a>
-          </div>
-        </div>
-      </div>
+    <br>
+    <section id="main-content" style="margin-top: 100px;">
 
       <div class="row">
-        <div class="small-16 columns">
-          <div class="big-sep"></div>
-        </div>
-      </div>
+        <div class="portfolioFilter">
 
-      <div class="row game-presentation">
-        <div class="small-16 large-9 columns">
-          <img src="/gamedemo/images/placeholders/game-large.jpg" alt="" class="thumbnail"/>
-          <div class="thumbnails">
-            <a href="/gamedemo/images/placeholders/game-large.jpg" target="_self" class="game-gallery thumbnail" data-litebox-group="group-1"><img src="/gamedemo/images/placeholders/game-t-1.jpg" alt="" /></a>
-            <a href="/gamedemo/images/placeholders/game-large.jpg" target="_self" class="game-gallery thumbnail" data-litebox-group="group-1"><img src="/gamedemo/images/placeholders/game-t-2.jpg" alt="" /></a>
-            <a href="/gamedemo/images/placeholders/game-large.jpg" target="_self" class="game-gallery thumbnail" data-litebox-group="group-1"><img src="/gamedemo/images/placeholders/game-t-3.jpg" alt="" /></a>
-            <a href="/gamedemo/images/placeholders/game-large.jpg" target="_self" class="game-gallery thumbnail" data-litebox-group="group-1"><img src="/gamedemo/images/placeholders/game-t-4.jpg" alt="" /></a>
-            <a href="/gamedemo/images/placeholders/game-large.jpg" target="_self" class="game-gallery thumbnail" data-litebox-group="group-1"><img src="/gamedemo/images/placeholders/game-t-5.jpg" alt="" /></a>
-          </div>
+          <a href="#" data-filter="*" class="current">All Categories</a>
+          <a href="#" data-filter=".action">Action/Adventure</a>
+          <a href="#" data-filter=".strategy">Strategy/Mind</a>
+          <a href="#" data-filter=".food">Food/Management</a>
+          <a href="#" data-filter=".race">Racing</a>
+     
         </div>
-        <div class="small-16 large-7 columns">
-          <div class="game-description">
-            <h2>Game Title</h2>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-              <br><br>
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
-            </p>
-          </div>
-          <div class="platforms">
-            <h5 class="white">Available on</h5>
-            <ul class="inline-list available-platforms">
-              <!--google-play-->
-              <li><a href="#"><img src="/gamedemo/images/icons/icon-gplay.png" alt="" /></a></li>
-              <!--apple-->
-              <li><a href="#"><img src="/gamedemo/images/icons/icon-apple.png" alt="" /></a></li>
-              <!--windows-->
-              <li><a href="#"><img src="/gamedemo/images/icons/icon-windows.png" alt="" /></a></li>
-              <!--steam-->
-              <li><a href="#" class="icon-steam"><img src="/gamedemo/images/icons/icon-steam.png" alt="" /></a></li>
-            </ul>
-          </div>
-          <div class="details-link">
-            <a href="games-single.html">Find Out More</a>
-          </div>
+         
+        <div class="portfolioContainer">
+         
+            <div class="thumbwrap strategy">
+                <img src="/gamedemo/images/pages/game1-large.jpg" alt="image" class="g-thumb">
+                <div class="img-caption bottom-top">
+                  <a href="/gamedemo/pages/wow_words.html"><h4>Wow Words</h4><br><button class="button">Play Now!</button></a>
+                </div>
+            </div>
+         
+            <div class="thumbwrap strategy">
+                <img src="/gamedemo/images/pages/game2-large.jpg" alt="image" class="g-thumb">
+                <div class="img-caption bottom-top">
+                  <a href="/gamedemo/pages/gravity.html"><h4>Gravity Linez</h4><br><button class="button">Play Now!</button></a>
+                </div>
+            </div>    
+         
+            <div class="thumbwrap action strategy">
+                <img src="/gamedemo/images/pages/game3-large.jpg" alt="image" class="g-thumb">
+                <div class="img-caption bottom-top">
+                  <a href="/gamedemo/pages/vex3.html"><h4>Vex 3</h4><br><button class="button">Play Now!</button></a>
+                </div>
+            </div>
+             
+            <div class="thumbwrap food">
+                <img src="/gamedemo/images/pages/game4-large.jpg" alt="image" class="g-thumb">
+                <div class="img-caption bottom-top">
+                  <a href="/gamedemo/pages/bartender.html"><h4>Bartender The Celeb Mix</h4><br><button class="button">Play Now!</button></a>
+                </div>
+            </div>
+         
+            <div class="thumbwrap strategy">
+                <img src="/gamedemo/images/pages/game5-large.jpg" alt="image" class="g-thumb">
+                <div class="img-caption bottom-top">
+                  <a href="/gamedemo/pages/tetris.html"><h4>Tetris Cube</h4><br><button class="button">Play Now!</button></a>
+                </div>
+            </div>
+         
+            <div class="thumbwrap strategy">
+                <img src="/gamedemo/images/pages/game6-large.jpg" alt="image" class="g-thumb">
+                <div class="img-caption bottom-top">
+                  <a href="/gamedemo/pages/checkers.html"><h4>Master Checkers</h4><br><button class="button">Play Now!</button></a>
+                </div>
+            </div>
+         
+            <div class="thumbwrap action race">
+                <img src="/gamedemo/images/pages/game7-large.jpg" alt="image" class="g-thumb">
+                <div class="img-caption bottom-top">
+                  <a href="/gamedemo/pages/sprint_nitro.html"><h4>Sprint Club Nitro</h4><br><button class="button">Play Now!</button></a>
+                </div>
+            </div>    
+             
+            <div class="thumbwrap action race">
+                <img src="/gamedemo/images/pages/game8-large.jpg" alt="image" class="g-thumb">
+                <div class="img-caption bottom-top">
+                  <a href="/gamedemo/pages/bike_rider2.html"><h4>Bike Rider 2: Armageddon</h4><br><button class="button">Play Now!</button></a>
+                </div>
+            </div>    
+         
+            <div class="thumbwrap food">
+                <img src="/gamedemo/images/pages/game9-large.jpg" alt="image" class="g-thumb">
+                <div class="img-caption bottom-top">
+                  <a href="/gamedemo/pages/breakfast_time.html"><h4>Breakfast Time</h4><br><button class="button">Play Now!</button></a>
+                </div>
+            </div>    
+         
+            <div class="thumbwrap action">
+                <img src="/gamedemo/images/pages/game10-large.jpg" alt="image" class="g-thumb">
+                <div class="img-caption bottom-top">
+                  <a href="/gamedemo/pages/stickman.html"><h4>Stickman Boost</h4><br><button class="button">Play Now!</button></a>
+                </div>
+            </div>    
+         
         </div>
       </div>
 
     </section>
 
-    <section class="row">
-      <div class="small-16 columns">
+   <!--  <section class="row">
+      <div class="small-16 columns"> -->
         <!--PAGINATION-->
-        <ul class="pagination">
+       <!--  <ul class="pagination">
           <li class="disabled">Prev <span class="show-for-sr">page</span></li>
           <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
           <li><a href="#" aria-label="Page 2">2</a></li>
@@ -138,10 +242,10 @@
           <li class="ellipsis" aria-hidden="true"></li>
           <li><a href="#" aria-label="Page 13">13</a></li>
           <li><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
-        </ul>
+        </ul> -->
         <!--//PAGINATION-->
-      </div>
-    </section>
+    <!--   </div>
+    </section> -->
 
     <footer class="main-footer">
       <div class="row">
@@ -184,14 +288,40 @@
         <!--copyright-->
         <div class="small-16 medium-6 columns">
           <p class="copyright">
-            Copyright &copy; KDEMO GAMES <span class="date"></span>. All Rights Reserved.
+            Copyright &copy; Game Demo <span class="date"></span>. All Rights Reserved.
           </p>
         </div>
         <!--//copyright-->
       </div>
     </footer>
-
-    <script src="/gamedemo/js/app-min.js"></script>
-    <script src="/gamedemo/js/functions.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+          var $container = $('.portfolioContainer');
+          $container.isotope({
+              filter: '*',
+              animationOptions: {
+                  duration: 750,
+                  easing: 'linear',
+                  queue: false
+              }
+          });
+       
+          $('.portfolioFilter a').click(function(){
+              $('.portfolioFilter .current').removeClass('current');
+              $(this).addClass('current');
+       
+              var selector = $(this).attr('data-filter');
+              $container.isotope({
+                  filter: selector,
+                  animationOptions: {
+                      duration: 750,
+                      easing: 'linear',
+                      queue: false
+                  }
+               });
+               return false;
+          }); 
+      });
+    </script>
   </body>
 </html>
